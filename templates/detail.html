@@ -27,9 +27,16 @@
     </div>
     </form>
     <br>
-    <ul>
+    <ul class="comment-list">
         {% for comment in question.comments %}
-            <li>{{ comment.content }}</li>
+            <li>
+                <div class="user_info">
+                    <img class="avatar" src="{{ url_for('static',filename='images/flask.png') }}" alt="">
+                    <span class="username">{{ comment.author.username }}</span>
+                    <span class="create-time">{{ comment.create_time }}</span>
+                </div>
+                <p class="comment-content">{{ comment.content }}</p>
+            </li>
         {% endfor %}
         
     </ul>

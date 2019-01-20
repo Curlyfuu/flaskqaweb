@@ -26,7 +26,8 @@ class Comment(db.Model):
     __tablename__ = 'comment'
     id = db.Column(db.Integer,primary_key=True,autoincrement=True)
     content = db.Column(db.Text, nullable=False)
+    create_time = db.Column(db.DateTime, default=datetime.now())
     question_id = db.Column(db.Integer, db.ForeignKey('question.id'))
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    question = db.relationship('Question', backref=db.backref('comments'))
+    question = db.relationship('Question', backref=db.backref('comments',order_by=id.desc()))
     author = db.relationship('User', backref=db.backref('comments'))
