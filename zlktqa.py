@@ -53,7 +53,7 @@ def regist():
         else:
             #密码验证password1==password2
             if password1 != password2:
-                return u'两次输入的密码不相等，请核对'
+                return u"<script>alert('两次输入的密码不相等，请核对')</script>"
             else:
                 user = User(telephone=telephone,username=username,password=password1)
                 db.session.add(user)
@@ -126,4 +126,4 @@ def add_comment():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='192.168.1.2',port=8080)
