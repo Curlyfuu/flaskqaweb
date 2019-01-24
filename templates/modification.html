@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}
+修改
+{% endblock %}
 
-</body>
-</html>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/modification.css') }}">
+{% block head %}
+
+{% endblock %}
+
+
+{% block main %}
+    <h3 class="page-title">文章修改</h3>
+    <form action="" method="post">
+        <div class="form-container">
+            <div class="form-group">
+{#                <input type="text" placeholder="请输入标题" name="title" class="form-control">#}
+                <textarea  cols="30" rows="1" name="content" id="form-content" class="form-control" onkeyup="convert()" ></textarea>
+            </div>
+            <div class="form-group">
+                <textarea  cols="30" rows="10" name="content" id="form-content" class="form-control" onkeyup="convert()" ></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">提交修改</button>
+            </div>
+
+        </div>
+    </form>
+    <hr>
+    <h3>预览：</h3>
+    <div id="pre-view"></div>
+    <script type="text/javascript">
+        function convert(){
+
+                    {#var text = "{{ question.content }}"#}
+                    var text = document.getElementById("form-content").value;
+                    {#console.log(typeof(text));#}
+                    var converter = new showdown.Converter();
+                    var html = converter.makeHtml(text);
+                    document.getElementById("pre-view").innerHTML = html;
+        }
+
+    </script>
+
+
+
+{% endblock %}

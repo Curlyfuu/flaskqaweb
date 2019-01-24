@@ -46,6 +46,19 @@
     border: 0;
 
 }
+.modify{
+    padding: 12px 6px;
+    height: 20px;
+    width: 40px;
+    background: #337ab7;
 
+    border-radius: 3px;
+}
+.btn.btn-primary a{
+    color: #fff;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
 
 

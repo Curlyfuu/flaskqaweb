@@ -85,6 +85,15 @@ def question():
         db.session.commit()
         return redirect(url_for('index'))
 
+@app.route('/modification/',methods=['GET',"POST"])
+@login_required
+def modification():
+
+    if request.method == 'GET':
+        return render_template('modification.html')
+    else:
+        pass
+
 
 
 
