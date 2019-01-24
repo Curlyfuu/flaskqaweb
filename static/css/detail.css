@@ -41,6 +41,11 @@
     margin-left: 60px;
 
 }
+.question-content pre{
+    border-radius:3px;
+    border: 0;
+
+}
 
 
 

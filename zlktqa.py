@@ -6,6 +6,8 @@ from decorator import login_required
 
 
 app = Flask(__name__)
+app.jinja_env.variable_start_string = '{{ '
+app.jinja_env.variable_end_string = ' }}'
 app.config.from_object(config)
 db.init_app(app)
 

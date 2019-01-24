@@ -4,6 +4,8 @@
 {% endblock %}
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static',filename='css/detail.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='showdown-master/dist/showdown.min.js') }}"></script>
+
 {% endblock %}
 {% block main %}
     <h3 class="page-title">{{ question.title }}</h3>
@@ -12,7 +14,18 @@
         <span>时间: {{ question.create_time }}</span>
     </p>
     <hr>
-    <p class="question-content">{{ question.content }}</p>
+    <div id="{{ question.id }}ll" class="question-content"></div>
+    <textarea style="visibility: hidden;" id="{{ question.id }}zz">{{ question.content }}</textarea>
+     <script type="text/javascript">
+
+                        {#var text = "{{ question.content }}"#}
+                        var text = document.getElementById("{{ question.id }}zz").value;
+                        {#console.log(typeof(text));#}
+                        var converter = new showdown.Converter();
+                        var html = converter.makeHtml(text);
+                        document.getElementById("{{ question.id }}ll").innerHTML = html;
+
+                    </script>
     <hr>
     <h4>评论 (0)</h4>
     <form action="{{ url_for('add_comment') }}" method="post">
