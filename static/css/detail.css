@@ -60,5 +60,14 @@
     font-size: 14px;
     font-weight: 400;
 }
+.username a{
+    color: #000;
+}
+#master-identification{
+
+    display: inline-block;
+    color: #337ab7;
+    font-weight: 900;
+}
 
 

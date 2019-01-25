@@ -16,9 +16,12 @@
 
     <hr>
     <div id="{{ question.id }}ll" class="question-content"></div>
-    <div class="btn btn-primary">
-        <a href="{{ url_for('modification') }}">编辑</a>
-    </div>
+    {% if user_id == question.author.id %}
+        <div class="btn btn-primary">
+            <a href="{{ url_for('modification',question_pre_id = question.id) }}">编辑</a>
+        </div>
+    {% endif %}
+
     <textarea style="visibility: hidden;" id="{{ question.id }}zz">{{ question.content }}</textarea>
      <script type="text/javascript">
 
@@ -49,7 +52,13 @@
             <li>
                 <div class="user_info">
                     <img class="avatar" src="{{ url_for('static',filename='images/flask.png') }}" alt="">
-                    <span class="username">{{ comment.author.username }}</span>
+                    <span class="username">
+                        <a href="{{ url_for('personal_homepage',user_id=comment.author_id) }}">{{ comment.author.username }}</a>
+
+                        <div id="master-identification">{% if  question.author_id == comment.author_id %}
+                            &nbsp;&nbsp;master
+                        {% endif %}</div>
+                    </span>
                     <span class="create-time">{{ comment.create_time }}</span>
                 </div>
                 <p class="comment-content">{{ comment.content }}</p>

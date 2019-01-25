@@ -20,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img class="logo" src="{{ url_for('static',filename='images/1.png') }}" alt="">
                 </a>
             </div>
@@ -44,7 +44,7 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     {% if user %}
-                        <li><a href="#">{{ user.username }}</a></li>
+                        <li><a href="{{ url_for('personal_homepage',user_id=user.id) }}">{{ user.username }}</a></li>
                         <li><a href="{{ url_for('logout') }}">注销</a></li>
 
                     {% else %}

@@ -85,14 +85,26 @@ def question():
         db.session.commit()
         return redirect(url_for('index'))
 
-@app.route('/modification/',methods=['GET',"POST"])
+@app.route('/modification/<question_pre_id>',methods=['GET',"POST"])
 @login_required
-def modification():
+def modification(question_pre_id):
 
     if request.method == 'GET':
-        return render_template('modification.html')
+        question_pre = Question.query.filter(Question.id == question_pre_id).first()
+
+        return render_template('modification.html',question = question_pre)
     else:
-        pass
+        question = Question.query.filter(Question.id == question_pre_id).first()
+        print(question)
+        print(question.title)
+        print(question.content)
+        title = request.form.get('title')
+        content = request.form.get('content')
+        question.title = title
+        question.content = content
+        # db.session.add(question)
+        db.session.commit()
+        return redirect(url_for('index'))
 
 
 
@@ -111,9 +123,9 @@ def my_contex_processor():
 @app.route('/detail/<question_id>')
 def detail(question_id):
     question_model = Question.query.filter(Question.id == question_id).first()
+    user_id = session.get('user_id')
 
-
-    return render_template('detail.html',question = question_model)
+    return render_template('detail.html',question = question_model,user_id=user_id)
 
 #评论功能
 @app.route('/add_comment/',methods=['POST'])
@@ -132,6 +144,18 @@ def add_comment():
     db.session.commit()
     return redirect(url_for('detail',question_id=question_id))
 
+@app.route('/personal_homepage/<user_id>')
+def personal_homepage(user_id):
+    user = User.query.filter(User.id == user_id).first()
+
+    context = {
+        'questions': Question.query.order_by('-create_time').all(),
+        'user' : user
+        # .query.order_by('-create_time').all()
+    }
+    print(context['questions'])
+    print(type(context['questions']))
+    return render_template('personal_homepage.html', **context)
 
 
 

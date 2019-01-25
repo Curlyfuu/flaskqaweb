@@ -3,8 +3,10 @@
 修改
 {% endblock %}
 
-<link rel="stylesheet" href="{{ url_for('static',filename='css/modification.css') }}">
+
 {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/modification.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='showdown-master/dist/showdown.min.js') }}"></script>
 
 {% endblock %}
 
@@ -14,11 +16,12 @@
     <form action="" method="post">
         <div class="form-container">
             <div class="form-group">
+                <input type="hidden" name="question_id" value="{{ question.id }}">
 {#                <input type="text" placeholder="请输入标题" name="title" class="form-control">#}
-                <textarea  cols="30" rows="1" name="content" id="form-content" class="form-control" onkeyup="convert()" ></textarea>
+                <textarea  cols="30" rows="1" style="height: 35px; font-weight: 700;" name="title" id="form-title" class="form-control">{{ question.title }}</textarea>
             </div>
             <div class="form-group">
-                <textarea  cols="30" rows="10" name="content" id="form-content" class="form-control" onkeyup="convert()" ></textarea>
+                <textarea  cols="30" rows="10" name="content" id="form-content" class="form-control" onkeyup="convert()" >{{ question.content }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary">提交修改</button>
