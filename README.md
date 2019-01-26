@@ -1,7 +1,7 @@
 
 
 
-# flask_web_qaplatform
+> # flask_web_qaplatform
 a web app about Q&amp;A platform based on flask and python 3
 
 ### [++程序源代码++](https://github.com/wake-up-smiling/flask_web_qaplatform)、
@@ -40,16 +40,5 @@ Rewquirement:
 # The-end
 
 
-> header 1 | header 2
 
----
-
-> ---|---
-> row 1 col 1 | row 1 col 2
-> row 2 col 1 | row 2 col 2
-
-![image](http://note.youdao.com/favicon.ico)
-
-# h1
->![image](http://note.youdao.com/favicon.ico)
 
