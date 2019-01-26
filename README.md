@@ -4,7 +4,7 @@
 > # flask_web_qaplatform
 a web app about Q&amp;A platform based on flask and python 3
 
-### [++程序源代码++](https://github.com/wake-up-smiling/flask_web_qaplatform)、
+### [++ 程序源代码 ++](https://github.com/wake-up-smiling/flask_web_qaplatform)
 
 https://github.com/wake-up-smiling/flask_web_qaplatform
 
