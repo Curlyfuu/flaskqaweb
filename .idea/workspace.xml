@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b4e98cc-59a5-4d89-b17b-d4b5463bcf72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zlktqa.py" beforeDir="false" afterPath="$PROJECT_DIR$/wake_up.py" afterDir="false" />
-    </list>
+    <list default="true" id="1b4e98cc-59a5-4d89-b17b-d4b5463bcf72" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="56">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#2#21#0" expanded="true" />
               </folding>
@@ -187,8 +183,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="591" />
+    <option name="y" value="208" />
     <option name="width" value="1170" />
-    <option name="height" value="1087" />
+    <option name="height" value="894" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -302,7 +299,7 @@
       <workItem from="1548303742363" duration="1996000" />
       <workItem from="1548340646029" duration="3778000" />
       <workItem from="1548422574191" duration="9731000" />
-      <workItem from="1548467818202" duration="7018000" />
+      <workItem from="1548467818202" duration="7028000" />
     </task>
     <task id="LOCAL-00001" summary="f">
       <created>1548210643134</created>
@@ -350,18 +347,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96765000" />
+    <option name="totallyTimeSpent" value="96775000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="591" y="0" width="938" height="1087" extended-state="0" />
-    <editor active="true" />
+    <frame x="591" y="208" width="1170" height="894" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36363637" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2877698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22570533" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22570533" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994528" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -647,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="56">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#2#21#0" expanded="true" />
           </folding>
