@@ -145,18 +145,24 @@ def add_comment():
     return redirect(url_for('detail',question_id=question_id))
 
 @app.route('/personal_homepage/<user_id>')
+@login_required
 def personal_homepage(user_id):
     user = User.query.filter(User.id == user_id).first()
 
+
     context = {
-        'questions': Question.query.order_by('-create_time').all(),
-        'user' : user
-        # .query.order_by('-create_time').all()
+        'questions': Question.query.filter(Question.author_id==user_id).order_by('-create_time').all(),
+        'user_f' : user,
+
     }
-    print(context['questions'])
-    print(type(context['questions']))
+    # print(q)
+    # print(type(q))
     return render_template('personal_homepage.html', **context)
 
+@app.route('/delete_article/<question_id>')
+@login_required
+def delete_article(question_id):
+    return u"<script>alert('我还没写好')</script>"
 
 
 
